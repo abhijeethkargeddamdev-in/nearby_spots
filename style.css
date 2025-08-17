@@ -18,6 +18,7 @@
 #map{
     height: 100vh;
     width: 100%;
+     position: relative;
 }
 
 .store-list .heading{
@@ -89,7 +90,7 @@
 
 .leaflet-popup-content-wrapper h4{
    padding: 16px;
-   background: #ff6804;
+   background: #ff9800;
    color: #fff;
    font-size: 16px;
 }
@@ -106,6 +107,79 @@
 }
 
 .leaflet-popup-content-wrapper .leaflet-popup-content .phone-number a{
-   color: #ff6808;
+   color: #ff9800;
    font-size: 14px;
+}
+
+
+
+.location-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.2s ease;
+}
+
+.location-btn:hover {
+  background: #f0f0f0;
+}
+
+.location-btn svg {
+  width: 22px;
+  height: 22px;
+  color: #ff6600; /* orange icon */
+}
+
+
+
+
+
+
+.op-data {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1001;
+}
+
+.category-tab {
+  background-color:#ff9800;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.category-tab.active {
+  background-color: white;
+  color: #ff9800;
+  padding-right: 25px; /* space for X */
+}
+
+.close-btn {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ff9800;
 }
